@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+        *{
+        margin: 0%;
+        padding: 0%;
+        font-family:;
+       
+    }
+.sec1{
+    width: 100%;
+    height:140vh;
+    
+}
+.upper-navbar{
+    width: 100%;
+    height: 8vh;
+    background-color: grey;
+    justify-content: center;
+    align-items: center;
+   
+}
+.upper_heading{
+    color:#fff;
+    transform: translate(30%,90%);
+}
+.navbar{
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+   
+    border-bottom: 1px solid rgb(128, 128, 128,0.3);
+}
+.logo img{
+  width:120px;
+}
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.nav-item {
+    position: relative;
+   
+}
+.nav-link {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    overflow-y: hidden;
+    cursor: pointer;
+}
+.nav-link::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color:yellow;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+.nav-link:hover {
+    background-color:transparent;
+    color: yellow;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    background-color: #333;
+    min-width: 160px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.dropdown-menu li {
+    border-bottom: 1px solid #575757;
+}
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+.dropdown-menu a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-menu a:hover {
+    background-color: #575757;
+}
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+.btn{
+    height:35px;
+    width:100px;
+    border-radius: 7px;
+    border: 1px solid yellow;
+    color:yellowgreen;
+    background-color: transparent;
+    margin: 3px;
+}
+.intro-container {
+            position: relative;
+            width: 100%;
+            height: 122vh;
+            overflow: hidden;
+}
+
+.intro-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%; /* Ensure video covers the area */
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%); /* Center the video */
+    z-index: -1; /* Send video behind other content */
+}
+.intro{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-top: -7%;
+}
+
+.intro img{
+    width:500px;
+    margin-top: 20%;
+    margin-left: 40%;
+    z-index: 1;
+}
+.subheading{
+    color:yellow;
+    font-size: 20px;
+    display: flex;
+    gap: 40px;
+    margin-left: 20%;
+    z-index: 1;
+}
+.business{
+    color:rgb(255, 255, 0,0.7);
+    z-index: 1;
+    margin-left: 19%;
+}
+.bottom_para{
+    text-align: center;
+    margin-top: 35%;
+    margin-left: 20%;
+    line-height: 23px;
+    text-shadow: 
+    0 0 0px #fff, 
+    0 0 0px #fff,
+    0 0 10px #fff;
+    overflow-y: hidden;
+    z-index: 1;
+}
+.link{
+    margin-left: 55%;
+    margin-top: -5%;
+    color:orange;
+    cursor: pointer;
+    z-index: 1;
+}
+.link a{
+    border-bottom: 1px solid orange;
+}
+.link .i{
+    width:20px;
+    height:20px;
+    transform: translate(4px,5px);
+    z-index: 1;
+    margin-left: 0%;
+}
+.link:hover + image {
+    color:white;
+    border-bottom: 1px solid white;
+   
+}
+.sec2{
+    width:100%;
+    height:63vh;
+    background:url(Group\ 1000003043.png) no-repeat center center;
+    background-size: cover;
+    background-color: black;
+   
+}
+.content{
+    transform: translate(8%,-260%);
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+#unlock{
+    color:white;
+    font-size: 23px;
+}
+#future{
+    color:orange;
+    font-size: 50px;
+    font-weight: 700;
+}
+.sec3{
+    width:100%;
+    height:120vh;
+    background-color: black;
+    margin-top: -8%;
+}
+.sec4{
+    width:100%;
+    height:90vh;
+    background: linear-gradient(to right,rgb(0, 0, 0,1),rgb(0,0,0,0.1)),url(abstract-wave-dots-blue-purple-tones-equalizer-music-3d-rendering\ 1.png) no-repeat center center;
+    background-size: cover;
+    border-top: 1px solid white;
+}
+.con{
+    justify-content: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    transform: translate(18%,50%);
+    gap:13px;
+    width:45%;
+}
+#why{
+    color:white;
+    text-transform: uppercase;
+    font-size: 26px;
+}
+
+#ans{
+    color:orange;
+    font-size: 37px;
+    font-weight: bolder;
+    text-shadow: 
+    -3px -2px 10px black, 
+    -3px -1px 0px black,
+    -3px 0 2px white;
+    border-left: 3px solid orange; /* Left border added */
+    padding-left: 10px; /* Optional padding */
+    margin-left: -8px;
+}
+#para{
+    color:white;
+    line-height: 30px;
+}
+.list{
+    list-style: none;
+}
+.list li{
+    margin:20px 0px;
+}
+.list li img{
+  width:20px;
+  filter:grayscale(1)
+}
+.list li a{
+    font-size: 16px;
+    color:orange;
+    filter:grayscale(1);
+}
+.list li a:hover{
+    filter: grayscale(0);
+    cursor: pointer;
+}
+.sec4 .list li:hover img{
+    filter: grayscale(0);
+    cursor: pointer;
+}
+.sec5{
+    width:100%;
+    height:90vh;
+    background:linear-gradient(to right,rgb(3, 3, 3,0.3),rgb(0, 0, 0,0.9),rgb(0, 0, 0,1)), url(liquidwallpaper.avif) no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+.left img{
+    transform: translate(-10%,-105%);
+   
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    transform: translate(130%,-320%);
+   width:40%;
+    z-index: 2;
+}
+.right h1{
+    color:white;
+    font-size: 35px;
+    z-index: 2;
+}
+.right h2{
+    color:orange;
+    font-size: 40px;
+    font-weight: 600;
+    z-index: 2;
+}
+.right p{
+    color:white;
+    font-size: 15px;
+    line-height: 23px;
+    z-index: 2;
+}
+.data-container{
+    display: flex;
+    gap: 70px;
+    font-weight: bold;
+}
+.percent-data{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-size: 20px;
+}
+.percent-data:hover #percent,
+.percent-data:hover #data {
+    color: orange;
+    cursor: pointer;
+}
+
+#percent{
+    color:grey;
+}
+#data{
+ color: grey;
+}
+
+.sec6{
+    width: 100%;
+    height:90vh;
+    background: linear-gradient(to right,rgb(206, 185, 29,0.3),rgb(0,0,0,0.3),rgb(0,0,0,1)),url(wave.avif) no-repeat center center;
+    background-size: cover;
+    margin-top: -60%;
+    justify-content: center;
+    align-items: center;
+}
+#title{
+    color:orange;
+    font-size: 35px;
+    font-weight: 900;
+    text-align: center;
+    transform: translateY(50px);
+}
+.container1{
+    position: relative;
+    background-color: transparent;
+    width: 80%;
+    height:50vh;
+    margin: auto;
+    transform: translateY(28%);
+    display: flex;
+    gap: 20px;
+}
+.container1_1{
+    position: relative;
+    background-color:transparent;
+    width: 35%;
+    height:60vh;
+    display: flex;
+    flex-direction: column;
+   
+}
+.container1_2{
+    position: relative;
+    background-color:transparent;
+    width: 65%;
+    height:60vh;
+    display:flex;
+    gap:15px;
+}
+.item{
+    width:33%;
+    height:60vh;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.item:nth-child(2){
+    
+    border-right: 1px solid white;
+}
+.item:nth-child(1){
+    border-right: 1px solid white;
+}
+.data{
+   width:85%;
+}
+#simplicity{
+    color:orange;
+    font-size: 32px;
+    font-weight: 800; 
+}
+
+.container1_1 p{
+    color:#fff;
+    font-size: 16px;
+    font-weight: 400; 
+    word-spacing: 4px;
+    line-height: 20px;
+}
+#title1{
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 10px;
+    color: #575757;
+}
+#title1:hover{
+    color:orange;
+    cursor: pointer;
+}
+#p{
+    font-size: 13px;
+    font-weight: 600;
+    color: gray;
+    word-spacing: 2px;
+   
+}
+.btn1{
+    width: 180px;
+    border-radius: 6px;
+    height: 40px;
+    background-color: gray;
+}
+.btn1:hover{
+  background:linear-gradient(to bottom,rgb(69, 47, 6),orange);
+  color:white;
+  cursor: pointer;
+}
+#price{
+    font-size: 18px;
+    font-weight: 700;
+    color: gray; 
+}
+#price:hover{
+    color:orange;
+    cursor: pointer;
+}
+#include{
+    font-size: 14px;
+    font-weight: 700;
+    color: gray; 
+}
+#border{
+    border-bottom: 1px solid grey;
+    margin-top: -7px;
+}
+#list1{
+    list-style: none;
+}
+#list1:hover{
+    cursor: pointer;
+}
+
+#list1 li{
+    margin: 10px 0px;
+}
+#list1 li a{
+  font-size: 13px;
+  color: grey;
+}
+#list1 li a:hover{
+    color:orange;
+}
+#list1 li a img{
+    width: 15px;
+}
+#list1 li a img:hover{
+    background-color: green;
+    border-radius: 50px;
+}
+.price1{
+    text-decoration:line-through;
+}
+.sec7{
+    width:100%;
+    height:130vh;
+    background-color: black;
+}
+.sec7_title{
+    color:orange;
+    font-size: 37px;
+    font-weight: bolder;
+    text-shadow: 
+    -3px -2px 10px black, 
+    -3px -1px 0px black,
+    -3px 0 4px white;
+    text-align: center;
+    transform: translateY(50px);
+}
+    .sec7_title1{
+    color:white;
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+    transform: translateY(70px);
+}
+.sec7_container{
+    width:70%;
+    height:95vh;
+    background-color: rgb(65, 44, 6);
+    transform: translateY(25%);
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-gap:0px;
+    margin: auto;
+}
+
+.info-container{
+    background-color: black;
+    border-right: 1px solid rgb(57, 38, 2);
+    
+}
+
+.info-container:nth-child(4){
+    border: none;
+}
+.info-container:nth-child(8){
+    border: none;
+}
+.info-container:hover{
+    background:linear-gradient(to bottom,rgb(37, 25, 2), black,black,rgb(37, 25, 2))
+   
+}
+.info:hover{
+    filter: brightness(0) invert(1);
+    mix-blend-mode:lighten ;
+    text-shadow: 
+    0 0 1px #fff, 
+    0 0 0px #fff,
+    0 0 1px #fff;
+
+}
+.image-container{
+    transform: translate(30%,180%);
+}
+.image-container img{
+    width:80px;
+}
+.image-container img:hover{
+    width:80px;
+    box-shadow:  0 0 40px rgba(238, 197, 72, 0.2);
+    background-color:transparent;
+    filter: brightness(0) invert(1);
+}
+.info{
+    color:rgba(255, 166, 0, 0.507);
+    width:60%;
+    font-size: 18px;
+    transform: translate(40%,340%);
+}
+.info-container:nth-child(2) .image-container img{
+ width:60px;
+ margin-top: 10px;
+ 
+} 
+.info-container:nth-child(3) .image-container img{
+ width:60px;
+} 
+.info-container:nth-child(4) .image-container img{
+ width:80px;
+ margin-top: -10px;
+}
+.info-container:nth-child(5) .image-container img{
+ width:60px;
+}
+.info-container:nth-child(6) .image-container img{
+ width:60px;
+}
+.info-container:nth-child(7) .image-container img{
+ width:60px;
+ margin-top: 10px;
+}
+.info-container:nth-child(8) .image-container img{
+ width:55px;
+ margin-top: 8px;
+}
+.sec8{
+    width:100%;
+    height:50vh;
+    background: linear-gradient(to right,rgb(40, 27, 3),rgba(0, 0, 0, 0.989),black);
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.sec8-container{
+    transform: translate(17%,50%);
+    justify-content: center;
+    align-items: center;
+    width:70%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#try{
+    font-size: 40px;
+    color:#fff;
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 
+    0 0 2px orange, 
+    0 0 0px orange,
+    0 0 30px rgb(147, 97, 3);
+}
+#p1{
+    font-size: 20px;
+    color: #fff;
+     text-align: center;  
+}
+.buttons{
+    display: flex;
+    gap:20px
+}
+.btn2{
+    height:45px;
+    width:140px;
+    border-radius: 7px;
+    border: none;
+    background-color: orange;
+    color:black;
+    font-weight: bold;
+}
+.btn2:hover{
+    background:linear-gradient(to bottom,rgb(59, 40, 4),rgb(224, 150, 12));
+    color:#fff;
+}
+.btn2:nth-child(2){
+    height:45px;
+    width:140px;
+    border-radius: 7px;
+    color:white;
+    background-color:rgb(79, 53, 4);
+}
+.btn2:nth-child(2):hover{
+    background-color: orange ;
+    color:black;
+    cursor: pointer;
+}
+.sec9{
+    width:100%;
+    height:250vh;
+    background-color: black;
+}
+.sec9-container{
+   width:40%;
+   transform: translate(20%,300%);
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+.sec9-container #connect{
+    color:white;
+    font-size: 40px;
+    text-shadow: 
+    -9px -9px 10px black, 
+    -2px -1px 0px black,
+    -3px -0px 0px white;
+}
+.sec9-container #p3{
+  font-size: 16px;
+  color: #fff;
+  
+}
+.animated-image{
+    transform: translate(60%,200%);
+}
+.animated-image:nth-child(1){
+    transform: translate(90%,290%);
+}
+.animated-image:nth-child(2){
+    transform: translate(80%,450%);
+}
+.animated-image:nth-child(3){
+    transform: translate(50%,120%);
+}
+.animated-image:nth-child(4){
+    transform: translate(40%,480%);
+}
+.animated-image img{
+    width:80px;
+}
+.animated-image img:hover{
+    width:80px;
+    box-shadow:  0 0px 90px rgb(243, 184, 9);
+    background-color:rgb(75, 50, 3);
+    border-radius: 10px;
+}
+.main{
+    margin: auto;
+    width: 80%;
+    height:110vh;
+    background-color: transparent;
+    transform: translate(0%,65%);
+    border-radius: 20px;
+    border: 2px dashed orange;
+}
+.register h2{
+    text-align: center;
+    transform: translateY(30px);
+    font-size: 60px;
+    color: orange;
+    text-shadow: 
+    -3px -2px 10px black, 
+    -3px -1px 0px black,
+    -3px 0 2px white;
+}
+form#register{
+    transform: translate(150px,20%);
+}
+label{
+    color:orange;
+    font-weight: 600;
+    font-size: 26px;
+    
+}
+input{
+    width:700px;
+    height:55px;
+    border:1px dashed orange;
+    border-radius: 10px;
+    background-color: transparent;
+}
+form#register p{
+    transform: translateY(10px);
+    color:rgb(240, 230, 230);
+    font-size: 14px;
+}
+.btn3{
+    color:black;
+    font-weight: 700;
+    width:150px;
+    height:50px;
+    border-radius: 10px;
+    transform: translate(220%,150%);
+    background: linear-gradient(to bottom,orange,rgb(66, 44, 4));
+}
+.footer{
+    width:100%;
+    height:50vh;
+    background-color: black;
+}
+.footer-container{
+    width:80%;
+    height:40vh;
+    display: flex;
+    gap: 220px;
+    background-color: transparent;
+    margin: auto;
+    transform: translateY(120px);
+}
+.r{
+    width:30%;
+    background-color: transparent;
+}
+.r img{
+    width:200px;
+    transform: translateY(30px);
+}
+.l{
+    width:70%;
+    display: flex;
+    gap:160px;
+    background-color:transparent;
+}
+#list{
+    list-style: none;
+}
+#list li{
+    margin: 10px 0px;
+    color:white;
+    font-size: 17px;
+}
+</style>
+<body>
+    <div class="sec1">
+        <div class="upper-navbar">
+            <div class="upper_heading">Subscribe to Our Newsletter for new& Latest Blogs& Resources</div>
+        </div>
+        <div class="navbar">
+            <div class="logo">
+                <img src="Layer_1-2.png">
+            </div>
+              <ul class="nav-list">
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Home</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Subitem 1</a></li>
+                        <li><a href="#">Subitem 2</a></li>
+                        <li><a href="#">Subitem 3</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Service 1</a></li>
+                        <li><a href="#">Service 2</a></li>
+                        <li><a href="#">Service 3</a></li>
+                    </ul>
+                </li>
+               <li class="nav-link">Pricing</li>
+               <li class="nav-link">Contact Us</li>
+               <li class="nav-link">About Us</li>
+               <li><button class="btn">Enroll Now</button></li>
+            </ul>
+         
+        </div>
+        <div class="intro-container">
+            <video autoplay muted loop id="background-video">
+                <source src="WhatsApp Video 2024-09-17 at 16.50.58_ef20e3c9.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="intro">
+            
+                <img src="title.png">
+                <div class="subheading">
+                    <h2 class="business">Your Business with</h2>
+                    <h2 class="AI">AI- Driven Automation</h2>
+                </div>
+                <div class="bottom_para"><p>Are you looking to strengthen your tech team with problem solvers who<br> excel in blockchain and emerging technologies?</p></div>
+                <div class="link"><a>Book a Meeting<img src="ar.png" class="i"></a></div>
+            </div>
+        </div>
+    </div>
+    <div class="sec2"></div>
+        <div class="content">
+            <div id="unlock">Unlock the Power of</div>
+            <div id="future">FutureTech Features</div>
+        </div>
+    </div>
+    <div class="sec3"></div>
+        <div class="container ">
+
+        </div>
+    </div>
+    <div class="sec4">
+        <div class="con">
+            <div id="why">why choose us</div>
+            <div id="ans">Innovative AI-Powered Solutions to<br>Drive Your Business Forward
+            </div>
+            <div id="para">Elevate your e-commerce revenue with our AI platform,Personalized support,easy interface,identify ideal audience,optimize ads,boost sales.Join us ,achieve goals effortlessely</div>
+            <ul class="list">
+                <li><a><img src="circletick.png">AI-powered platform for digital Marketing optimization</a></li>
+                <li><a><img src="circletick.png"> Easy to use unterface and personalized support for store owners</a></li>
+                <li><a><img src="circletick.png">Find your ideal target audience quickly and eficiently for increased revenue </a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="sec5"></div>
+    <div class="left">
+        <img src="Group 1000003100.png">
+        </div>
+        <div class="right">
+            <h1>OUR MISSION</h1>
+            <h2>Turn Ideas into Reality</h2>
+            <p>It emphasizes the importance of moving beyond just having ideas and instead taking the necessary steps ti bring them fruition. Whether it's starting a business,pursuing a passion project,or setting personal goals,the idea is to turn abstract thoughts into concreete results.It's a call to acion to take control to our lives and turn our udeas into a reality that e can be proud of and enjoy/</p>
+            <div class="data-container">
+                <div class="percent-data">
+                    <div id="percent">80%</div>
+                    <div id="data">Seo</div>
+                </div>
+                <div class="percent-data">
+                    <div id="percent">90%</div>
+                    <div id="data">Design</div>
+                </div>
+                <div class="percent-data">
+                    <div id="percent">87%</div>
+                    <div id="data">Development</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sec6">
+        <div id="title">Pricing</div>
+         <div class="container1">
+            <div class="container1_1">
+               <div class="data">
+                <div id="simplicity">Pricing Designed for simplicity</div>
+                <p>We know trying a new service out can be scary. Rhat;s why we offer a 7-day money back gurantee if you aren't happy with our work, no questions asked</p>
+               </div>
+            </div>
+            <div class="container1_2">
+                <div class="item">
+                    <div id="title1">Essentials</div>
+                    <div id="p">Lorem ipsum dolor, sit amet consectetur sed quos psum dolor, sit amet .</div>
+                     <button class="btn1">Secondary action</button>
+                    <div id="price">$1</div>
+                    <div id="include">WHAT'S INCLUDED</div>
+                    <div id="border"></div>
+                    <ul id="list1">
+                        <li class="l"><a><img src="tick (2).png" class="icon">&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit   </a></li>
+                        <li class="l"><a><img src="tick (2).png" class="icon">&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit </a></li>
+                        <li class="l"><a><img src="tick (2).png" class="icon">&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit    </a></li>
+                        <li class="l"><a><img src="tick (2).png" class="icon">&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit </a></li>
+                        <li class="l"><a><img src="tick (2).png" class="icon">&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit  </a></li>
+                    </ul>
+                    </div>
+                <div class="item">
+                    <div id="title1">Pro</div>
+                    <div id="p">Lorem ipsum dolor, sit amet consectetur sed quos psum dolor, sit amet .</div>
+                     <button class="btn1">Primary action</button>
+                    <div id="price"><span class="price1">$999</span>$10/month</div>
+                    <div id="include">WHAT'S INCLUDED</div>
+                    <div id="border"></div>
+                    <ul id="list1">
+                        <li class="l"><a><img src="tick (2).png" class="icon">&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit   </a></li>
+                        <li class="l"><a><img src="tick (2).png" class="icon">&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit   </a></li>
+                        <li class="l"><a><img src="tick (2).png" class="icon">&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit    </a></li>
+                        <li class="l"><a><img src="tick (2).png" class="icon">&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit </a></li>
+                        <li class="l"><a><img src="tick (2).png" class="icon">&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit  </a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <div id="title1">Premium</div>
+                    <div id="p">Lorem ipsum dolor, sit amet consectetur sed quos psum dolor, sit amet .</div>
+                     <button class="btn1">Secondary action</button>
+                    <div id="price"><span class="price1">$999</span> $15/month</div>
+                    <div id="include">WHAT'S INCLUDED</div>
+                    <div id="border"></div>
+                    <ul id="list1">
+                        <li class="l"><a><img src="tick (2).png" class="icon">&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit   </a></li>
+                        <li class="l"><a><img src="tick (2).png" class="icon">&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit  </a></li>
+                        <li class="l"><a><img src="tick (2).png" class="icon">&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit   </a></li>
+                        <li class="l"><a><img src="tick (2).png" class="icon">&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit </a></li>
+                        <li class="l"><a><img src="tick (2).png" class="icon">&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit  </a></li>
+                    </ul>
+                </div>
+            </div>
+         </div>
+    </div>
+    <div class="sec7">
+        <div class="sec7_title">Our Services</div>
+        <div class="sec7_title1">Transforming Ideas into Tangible Success</div>
+        <div class="sec7_container">
+            <div class="info-container">
+                <div class="image-container">
+                    <img src="Group (1).png">
+                </div>
+                <div class="info">Ai Marketing & Automation(SEO) </div>
+            </div>
+            <div class="info-container">
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+                <div class="image-container">
+                    <img src="Group.png">
+                </div>
+                <div class="info">Ai Marketing & Automation(SEO) </div>
+            </div>
+            <div class="info-container">
+                <div class="image-container">
+                    <img src="Group (2).png">
+                </div>
+                <div class="info">Analytics<br> Reporting </div>
+            </div>
+            <div class="info-container">
+                <div class="image-container">
+                    <img src="Group (3).png">
+                </div>
+                <div class="info">Finance Department(FM)</div>
+            </div>
+            <div class="info-container">
+                <div class="image-container">
+                    <img src="Group (4).png">
+                </div>
+                <div class="info">Social Media management(SMS) </div>
+            </div>
+            <div class="info-container">
+                <div class="image-container">
+                    <img src="Group (5).png">
+                </div>
+                <div class="info">Search Engine Optimization(SEO) </div>
+            </div>
+            <div class="info-container">
+                <div class="image-container">
+                    <img src="Group (6).png">
+                </div>
+                <div class="info">UI/UX Design (UI/UX) </div>
+            </div>
+            <div class="info-container">
+                <div class="image-container">
+                    <img src="Group (7).png">
+                </div>
+                <div class="info">Web<br> Development </div>
+            </div>
+            
+                   
+        </div>
+    </div>
+    <div class="sec8">
+        <div class="sec8-container">
+            <div id="try">Try it for free</div>
+            <div id="p1">No Credit  Cards Required.Start your 14 days free trial Now.</div>
+            <div class="buttons">
+                <button class="btn2">Try now</button>
+                <button class="btn2">Contact Sales</button>
+            </div>
+        </div>
+    </div>
+    <div class="sec9">
+        <div class="sec9-container">
+            <div id="connect">Connect the app you use everyday</div>
+            <div id="p3">Explore Seamless Integration With Your Current Toolstack</div>
+        </div>
+        <div class="animated-image">
+            <img src="Vector (3).png">
+        </div>
+        <div class="animated-image">
+            <img src="Vector__2_-removebg-preview.png">
+        </div>
+        <div class="animated-image">
+            <img src="Vector__1_-removebg-preview.png">
+        </div>
+        <div class="animated-image">
+            <img src="Vector.png">
+        </div>
+        <div class="main">
+            <div class="register">
+            <h2>Contact Us</h2>
+            <form action="action.js" id="register" method="post">
+                <label for="Name">Name :</label>
+               <br><br>
+                <input type="text" id="Name" placeholder="Enter your first name" required>
+                <br>
+                <p>Please enter your full name</p>
+                <br><br>
+                <label for="Email">Email :</label>
+                <br><br>
+                <input type="text" id="Email" placeholder="Enter your first name" required>
+                <br>
+                <p>We will never share your email with anyone else</p>
+                <br><br>
+                <label for="massg">Message :</label>
+                <br><br>
+                <input type="text" id="massg" placeholder="Enter your first name" required>
+                <br>
+                <p>Feel free to ask any questions</p>
+                <button class="btn3">Submit</button>
+            </form>
+            </div>      
+        </div>    
+    </div>
+    <div class="footer">
+        <div class="footer-container">
+            <div class="r">
+                <img src="Layer_1-2.png">
+            </div>
+            <div class="l">
+                <ul id="list">
+                    <li>Contact</li>
+                    <li>Email</li>
+                    <li>Twitter</li>
+                    <li>Linkedin</li>
+                </ul>
+                <ul id="list">
+                    <li>Get Support</li>
+                    <li>Partner with us</li>
+                    <li>Become a partner</li>
+                    <li>Signup for updates</li>
+                </ul>
+                <ul id="list">
+                    <li>Read our blog</li>
+                    <li>Request a demo</li>
+                    <li>Explore Ai Solutions</li>
+                    <li>Save on our first</li>
+                </ul>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
